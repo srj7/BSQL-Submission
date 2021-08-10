@@ -1,4 +1,4 @@
-# [BINARY SQUIRREL](https://binarysquirrel.cf) https://binarysquirrel.cf
+# [BINARY SQUIRREL](https://binarysquirrel.cf) [www.binarysquirrel.cf](https://binarysquirrel.cf)
 
 
 ![Product image](https://github.com/srj7/Binary-Squirrel-Website-PWA/blob/main/images/BSQL.png?raw=true)
