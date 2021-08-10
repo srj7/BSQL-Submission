@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" href="../assets/img/favicon.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>
+		Binary Squirrel
+	</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+	<!--     Fonts and icons     -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<link href="../assets/css/font-awesome-animation.css" rel="stylesheet" />
+
+	<!-- Nucleo Icons -->
+	<link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+	<!-- CSS Files -->
+	<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="../assets/css/black-dashboard.css" rel="stylesheet" />
+	<link href="../assets/css/extra.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="wrapper ">
+		<div class="sidebar">
+
+			<!--Sidebar-->
+
+			<div class="sidebar-wrapper">
+				<div class="logo">
+					<a href="http://www.binarysquirrel.cf" class="simple-text logo-mini">
+						B.S
+					</a>
+					<a href="http://www.binarysquirrel.cf" class="simple-text logo-normal">
+						Binary Squirrel
+					</a>
+				</div>
+				<ul class="nav">
+					<li>
+						<a href="../index.html">
+							<i class="tim-icons icon-chart-pie-36"></i>
+							<p>Compiler (Lite)</p>
+						</a>
+					</li>
+					<li>
+						<a href="#" onclick="confirmbut2()">
+							<i class="tim-icons icon-atom"></i>
+							<p>Compiler (Advanced)</p>
+						</a>
+					</li>
+					<li>
+						<a href="" onclick="confirmbut1()">
+							<i class="tim-icons icon-pin"></i>
+							<p>Telegram Bot</p>
+						</a>
+
+						<a href="https://github.com/srj7/Bsql">
+							<i class="tim-icons icon-puzzle-10"></i>
+							<p>Source Code</p>
+						</a>
+					</li>
+					<li>
+						<a href="#" onclick="confirmbut()">
+							<i class="tim-icons icon-align-center"></i>
+							<p>Ebooks (External)</p>
+						</a>
+					</li>
+					<li class="active ">
+						<a href="./About.html">
+							<i class="tim-icons icon-world"></i>
+							<p>About</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="main-panel">
+			<!-- Navbar -->
+			<nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent   ">
+				<div class="container-fluid">
+					<div class="navbar-wrapper">
+						<div class="navbar-toggle d-inline">
+							<button type="button" class="navbar-toggler">
+								<span class="navbar-toggler-bar bar1"></span>
+								<span class="navbar-toggler-bar bar2"></span>
+								<span class="navbar-toggler-bar bar3"></span>
+							</button>
+						</div>
+						<a class="navbar-brand" href="#">Binary Squirrel</a>
+					</div>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-bar navbar-kebab"></span>
+						<span class="navbar-toggler-bar navbar-kebab"></span>
+						<span class="navbar-toggler-bar navbar-kebab"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navigation">
+						<ul class="navbar-nav ml-auto ">
+							<li class="dropdown nav-item">
+								<a href="" class="dropdown-toggle nav-link" data-toggle="dropdown">
+									<div class="fa-3x"></div>
+									<i class="fas fa-cog fa-spin"></i>
+									<p class="d-lg-none">
+										Settings
+									</p>
+								</a>
+							
+								<div class="fixed-plugin">
+									<div class="dropdown show-dropdown">
+										<a href="#" data-toggle="dropdown">
+											
+										</a>
+										<ul class="dropdown-menu">
+											<li class="header-title"> Sidebar Background</li>
+											<li class="adjustments-line">
+												<a href="javascript:void(0)" class="switch-trigger background-color">
+													<div class="badge-colors text-center">
+														<span class="badge filter badge-blue active" data-color="primary"></span>
+														<span class="badge filter badge-primary" data-color="blue"></span>
+														<span class="badge filter badge-green" data-color="green"></span>
+													</div>
+													<div class="clearfix"></div>
+												</a>
+											</li>
+											<li class="adjustments-line text-center color-change">
+												<span class="color-label">LIGHT MODE</span>
+												<span class="badge light-badge mr-2"></span>
+												<span class="badge dark-badge ml-2"></span>
+												<span class="color-label">DARK MODE</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- End Navbar -->
+			<div class="content">
+				<div class="row">
+					<div class="card  card-user">
+						<div class="card-body ">
+							<p class="card-text">
+								</p><div class="author">
+									<div class="block block-one"></div>
+									<div class="block block-two"></div>
+									<div class="block block-three"></div>
+									<div class="block block-four"></div>
+									<a href="#">
+										<img class="avatar" src="../assets/img/favicon.png" alt="...">
+										<h1 class="title">About The project</h1>
+									</a>
+									<p class="card-description">
+										Many universities and colleges worldwide suspended classroom teaching due to the novel
+coronavirus pandemic, students opted for Computer science are facing lot of difficulties for
+practical subjects. Since there is no access to college computer lab, it is difficult for them to do
+coding or learn coding especially in India. One has to install Compilers or IDE in their system to
+do these. For those who does not have a PC or Laptop there is no way for doing it. They just have
+to rely only on the lessons taught virtually. So, we develop software as a service, a Cloud based
+lite weight web app for the students to do there coding works and get outputs. This app's main
+goal is that they can easily write programs, compile and debug them online.
+<br> This project is proposed for the betterment of student career. This project aims to help those
+students not have a PC or Laptop to do there coding works and get outputs. This research main
+goal is that they can easily write programs, compile and debug in online. Using these cloud
+compilers, we can reduce the storage space and movability, centralized compiler using cloud
+computing that helps to save the time, storage and cost using this concept. So that it’s a most
+appropriate tool to compile the code, remove the errors and debug it.
+The online IDEs available are heavy (Contains lot of scripts, Ads, Compatibility issues with mobile
+etc.) and most of the time they won’t even load on mobile browsers. If the student does not have
+access to high-speed internet then thy can’t even use the online IDEs. Also, the tracking, logging,
+advertisements, scripts everything is big privacy threat.
+We endorse privacy. So, the Binary squirrel will be open source and it will never have any ads,
+tracking, or cookies that can identify or target users.
+									</p>
+								</div>
+							<p></p>
+						</div>
+						<div class="card-footer ">
+							<div class="button-container">
+								<p> made with <i class="fa fa-heart faa-pulse animated"></i>
+								</p>
+							</div>
+						</div>
+					</div>
+							<div class="card  card-user">
+								<div class="card-body ">
+									<p class="card-text">
+										</p><div class="author">
+											<div class="block block-one"></div>
+											<div class="block block-two"></div>
+											<div class="block block-three"></div>
+											<div class="block block-four"></div>
+											<a href="#">
+												<h1 class="title">Who is behind Binary Squirrel</h1>
+											</a>
+											<p class="description">
+												<a href="https://github.com/srj7">
+												<h3>Sooraj S</h3></a>
+												<h3>Avinash Unni</h3>	
+												<h3>Athira Kamalasanan</h3>
+												<h3>Aswin Nair</h3>	
+											</p>
+										</div>
+									<p></p>
+								</div>
+								<div class="card-footer ">
+									<div class="button-container">
+										<p class="card-description">
+											“Don’t be afraid to take risks. Make the most of your journey. Make it fun and exciting.”
+	— Bernie Williams.</p>
+									</div>
+								</div>
+							</div>
+						</blockquote>
+					</div>
+			</div>  
+			  
+		</div>
+			</div>    
+		</div>
+	</div>
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<nav>
+						<div class="copyright float-right">
+							©
+							<script>
+								document.write(new Date().getFullYear())
+							</script> <a href="#"> Binary Squirrel    </a><i class="fas fa-space-shuttle faa-passing animated"></i> 
+						</div>
+					</nav>
+					<div class="copyright float-right"> made with <i class="fa fa-heart faa-pulse animated"></i> for a better future</a>
+					</div>
+			</footer>
+			</div>
+		</div>
+		
+		<!--   Core JS Files   -->
+		<script src="../assets/js/core/jquery.min.js"></script>
+		<script src="../assets/js/core/popper.min.js"></script>
+		<script src="../assets/js/core/bootstrap.min.js"></script>
+		<script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+		<!--  Notifications Plugin    -->
+		<script src="../assets/js/plugins/bootstrap-notify.js"></script>
+		<!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+		<script src="../assets/js/black-dashboard.min.js?v=1.0.0" type="text/javascript"></script>
+		 <!-- notification -->
+		<script src="../assets/js/extra.js"></script>
+		
+		 <!-- Compiler -->
+		<script type="text/javascript">
+			API_KEY = "01845d9f73msh1011051f1e08c81p1c6b48jsndcdf2d44d354";
+			var language_to_id = {
+					"PHP": 68,
+					"C": 50,
+					"C#": 51,
+					"C++": 54,
+					"Java": 62,
+					"Python": 71,
+					"Ruby": 72
+			};
+		
+			function encode(str) {
+					return btoa(unescape(encodeURIComponent(str || "")));
+			}
+		
+			function decode(bytes) {
+					var escaped = escape(atob(bytes || ""));
+					try {
+							return decodeURIComponent(escaped);
+					} catch {
+							return unescape(escaped);
+					}
+			}
+		
+			function errorHandler(jqXHR, textStatus, errorThrown) {
+					$("#output").val(`${JSON.stringify(jqXHR, null, 4)}`);
+					$("#run").prop("disabled", false);
+			}
+		
+			function check(token) {
+					$("#output").val($("#output").val() + "\nChecking submission status...");
+					$.ajax({
+							url: `https://judge0-ce.p.rapidapi.com/submissions/${token}?base64_encoded=true`,
+							type: "GET",
+							headers: {
+									"x-rapidapi-host": "judge0-ce.p.rapidapi.com",
+									"x-rapidapi-key": API_KEY
+							},
+							success: function (data, textStatus, jqXHR) {
+									if ([1, 2].includes(data["status"]["id"])) {
+											$("#output").val($("#output").val() + "\nStatus: " + data["status"]["description"]);
+											setTimeout(function() { check(token) }, 1000);
+									}
+									else {
+											var output = [decode(data["compile_output"]), decode(data["stdout"])].join("\n").trim();
+											$("#output").val(output);
+											$("#run").prop("disabled", false);
+									}
+							},
+							error: errorHandler
+					});
+			}
+		
+			function run() {
+					$("#run").prop("disabled", true);
+					$("#output").val("Creating submission...");
+					$.ajax({
+							url: "https://judge0.p.rapidapi.com/submissions?base64_encoded=true",
+							type: "POST",
+							contentType: "application/json",
+							headers: {
+									"x-rapidapi-host": "judge0-ce.p.rapidapi.com",
+									"x-rapidapi-key": API_KEY
+							},
+							data: JSON.stringify({
+									"language_id": language_to_id[$("#lang").val()],
+									"source_code": encode($("#source").val()),
+									"stdin": encode($("#input").val()),
+									"redirect_stderr_to_stdout": true
+							}),
+							success: function(data, textStatus, jqXHR) {
+									$("#output").val($("#output").val() + "\nSubmission created.");
+									setTimeout(function() { check(data["token"]) }, 1000);
+							},
+							error: errorHandler
+					});
+			}
+		
+			$("body").keydown(function (e) {
+					if (e.ctrlKey && e.keyCode == 13) {
+							run();
+					}
+			});
+		
+			$("textarea").keydown(function (e) {
+					if (e.keyCode == 9) {
+							e.preventDefault();
+							var start = this.selectionStart;
+							var end = this.selectionEnd;
+		
+							var append = "    ";
+							$(this).val($(this).val().substring(0, start) + append + $(this).val().substring(end));
+		
+							this.selectionStart = this.selectionEnd = start + append.length;
+					}
+			});
+		
+			$("#source").focus();
+		</script>
+				
+		
+		<script>
+			$(document).ready(function() {
+				$().ready(function() {
+					$sidebar = $('.sidebar');
+					$navbar = $('.navbar');
+
+					$full_page = $('.full-page');
+
+					$sidebar_responsive = $('body > .navbar-collapse');
+					sidebar_mini_active = true;
+					white_color = false;
+
+					window_width = $(window).width();
+
+					fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+
+
+					$('.fixed-plugin a').click(function(event) {
+						// Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+						if ($(this).hasClass('switch-trigger')) {
+							if (event.stopPropagation) {
+								event.stopPropagation();
+							} else if (window.event) {
+								window.event.cancelBubble = true;
+							}
+						}
+					});
+
+					$('.fixed-plugin .background-color span').click(function() {
+						$(this).siblings().removeClass('active');
+						$(this).addClass('active');
+
+						var new_color = $(this).data('color');
+
+						if ($sidebar.length != 0) {
+							$sidebar.attr('data-color', new_color);
+						}
+
+						if ($navbar.length != 0) {
+							$navbar.attr('data-color', new_color);
+						}
+
+						if ($full_page.length != 0) {
+							$full_page.attr('filter-color', new_color);
+						}
+
+						if ($sidebar_responsive.length != 0) {
+							$sidebar_responsive.attr('data-color', new_color);
+						}
+					});
+
+					$('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
+						var $btn = $(this);
+
+						if (sidebar_mini_active == true) {
+							$('body').removeClass('sidebar-mini');
+							sidebar_mini_active = false;
+							blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
+						} else {
+							$('body').addClass('sidebar-mini');
+							sidebar_mini_active = true;
+							blackDashboard.showSidebarMessage('Sidebar mini activated...');
+						}
+
+						// we simulate the window Resize so the charts will get updated in realtime.
+						var simulateWindowResize = setInterval(function() {
+							window.dispatchEvent(new Event('resize'));
+						}, 180);
+
+						// we stop the simulation of Window Resize after the animations are completed
+						setTimeout(function() {
+							clearInterval(simulateWindowResize);
+						}, 1000);
+					});
+
+					$('.switch-change-color input').on("switchChange.bootstrapSwitch", function() {
+						var $btn = $(this);
+
+						if (white_color == true) {
+
+							$('body').addClass('change-background');
+							setTimeout(function() {
+								$('body').removeClass('change-background');
+								$('body').removeClass('white-content');
+							}, 900);
+							white_color = false;
+						} else {
+
+							$('body').addClass('change-background');
+							setTimeout(function() {
+								$('body').removeClass('change-background');
+								$('body').addClass('white-content');
+							}, 900);
+
+							white_color = true;
+						}
+
+
+					});
+
+					$('.light-badge').click(function() {
+						$('body').addClass('white-content');
+					});
+
+					$('.dark-badge').click(function() {
+						$('body').removeClass('white-content');
+					});
+				});
+			});
+		</script>
+
+		 <!-- Confirm to leave -->
+
+		 <script>
+			function confirmbut2(){
+				if(confirm("The advanced version works like a fully featured code editor and is not optimised for mobile devices and slower networks. Are you sure want to continue?")){
+					window.open("../pages/Advanced editor.html");
+					}
+				return;
+		 }
+		 </script>
+		 <script>
+			function confirmbut1(){
+				if(confirm("You need to have telegram app installed to make the bot work. Are you sure want to continue?")){
+					window.open("https://t.me/bsqlbot");
+					}
+				return;
+		 }
+		 </script>
+						
+				 <script>
+		function confirmbut(){
+			if(confirm("The Ebook library is an external service. We are not responsible for the content or any changes there.")){
+				window.open("https://z-lib.org/");
+				}
+			return;
+	 }
+	 </script>
+</body>
+
+</html>

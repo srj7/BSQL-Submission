@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Binary Squirrel
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link href="./assets/css/font-awesome-animation.css" rel="stylesheet" />
+
+  <!-- Nucleo Icons -->
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="./assets/css/black-dashboard.css" rel="stylesheet" />
+  <link href="./assets/css/extra.css" rel="stylesheet" />
+  <!--PWA-->
+  <link rel="manifest" href="manifest.json">
+  <script>
+      //if browser support service worker
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+      };
+    </script>
+</head>
+
+<body>
+  <div class="wrapper ">
+    <div class="sidebar">
+
+      <!--Sidebar-->
+
+      <div class="sidebar-wrapper">
+        <div class="logo">
+          <a href="#" class="simple-text logo-mini">
+            B.S
+          </a>
+          <a href="#" class="simple-text logo-normal">
+            Binary Squirrel
+          </a>
+        </div>
+        <ul class="nav">
+          <li class="active ">
+            <a href="./index.html">
+              <i class="tim-icons icon-chart-pie-36"></i>
+              <p>Compiler (Lite)</p>
+            </a>
+          </li>
+          <li>
+            <a href="" onclick="confirmbut1()">
+              <i class="fab fa-telegram" style="font-size:24px; color:white;"></i>
+              <p>Telegram Bot</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/srj7/Binary-Squirrel-Website-PWA">
+              <i class="tim-icons icon-puzzle-10"></i>
+              <p>Source Code</p>
+            </a>
+          </li>
+          <li>
+            <a href="" onclick="confirmbut()">
+              <i class="tim-icons icon-align-center"></i>
+              <p>Ebooks (External)</p>
+            </a>
+          </li>
+          <li>
+            <a href="../pages/About.html">
+              <i class="tim-icons icon-bell-55"></i>
+              <p>About</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent   ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle d-inline">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="#">Binary Squirrel</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto ">
+              <li class="dropdown nav-item">
+                <a href="" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                  <div class="fa-3x"></div>
+                  <i class="fas fa-cog fa-spin"></i>
+                  <p class="d-lg-none">
+                    Settings
+                  </p>
+                </a>
+              
+                <div class="fixed-plugin">
+                  <div class="dropdown show-dropdown">
+                    <a href="#" data-toggle="dropdown">
+                      
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li class="header-title"> Sidebar Background</li>
+                      <li class="adjustments-line">
+                        <a href="javascript:void(0)" class="switch-trigger background-color">
+                          <div class="badge-colors text-center">
+                            <span class="badge filter badge-blue active" data-color="primary"></span>
+                            <span class="badge filter badge-primary" data-color="blue"></span>
+                            <span class="badge filter badge-green" data-color="green"></span>
+                          </div>
+                          <div class="clearfix"></div>
+                        </a>
+                      </li>
+                      <li class="adjustments-line text-center color-change">
+                        <span class="color-label">LIGHT MODE</span>
+                        <span class="badge light-badge mr-2"></span>
+                        <span class="badge dark-badge ml-2"></span>
+                        <span class="color-label">DARK MODE</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Source Code</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <textarea id="source" class="form-control" rows="20" cols="20" placeholder="Please write your code here"></textarea>
+                </div>
+                <div>
+                  <div class="form-group">
+                    <label for="sel1">Select Language:</label>
+                    <select class="form-control" id="lang" name="Languages">
+                        <option style="background-color:#27293D;color:#E1E2E1;">PHP</option>
+                        <option style="background-color:#27293D;color:#E1E2E1;">C#</option>
+                        <option style="background-color:#27293D;color:#E1E2E1;">C++</option>
+                        <option style="background-color:#27293D;color:#E1E2E1;" selected>C</option>
+                        <option style="background-color:#27293D;color:#E1E2E1;">Java</option>
+                        <option style="background-color:#27293D;color:#E1E2E1;">Python</option>
+                        <option style="background-color:#27293D;color:#E1E2E1;">Ruby</option>
+                    </select>
+                    <div>
+                      <div class="form-group">
+                        <label for="sele1">Inputs</label>
+                    <textarea id="input" rows="2" style="width:100%" class="form-control" placeholder="Type inputs before clicking run (If any)" value="input"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-8 ml-auto mr-auto">
+                  <div class="col-md-12">
+                    <button class="button btn-block btn-round" onclick="run(); demo.showNotification('top','center')">Run</button>
+                  </div>
+                </div>   
+              </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Output</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <div class="outer">
+                    <textarea id="output" name="output" class="form-control" rows="27" cols="20" placeholder="Output will be displayed here"></textarea>
+                      <div class="overlay">
+                        <p class="textoverlay">Output Area</p>
+                  </div>
+                </div>  
+              </div> 
+                  <div class="row">
+                    <div class="col-lg-8 ml-auto mr-auto">
+                      <div class="col-md-12">
+                        <button class="button btn-block btn-round" onclick="window.print()">Save Output</button>
+                      </div>
+                    </div>   
+                  </div>
+                  </div>
+              </div>
+        </div>  
+      </div>    
+    </div>
+      <footer class="footer">
+        <div class="container-fluid">
+          <nav>
+            <div class="copyright float-right">
+              ©
+              <script>
+                document.write(new Date().getFullYear())
+              </script> <a href="#"> Binary Squirrel    .   </a><i class="fas fa-space-shuttle faa-passing animated"></i> 
+            </div>
+          </nav>
+          <div class="copyright float-right"> made with <i class="fa fa-heart faa-pulse animated"></i></a>
+          </div>
+      </footer>
+      </div>
+    </div>
+    
+    <!--   Core JS Files   -->
+    <script src="./assets/js/core/jquery.min.js"></script>
+    <script src="./assets/js/core/popper.min.js"></script>
+    <script src="./assets/js/core/bootstrap.min.js"></script>
+    <script src="./assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="./assets/js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="./assets/js/black-dashboard.min.js?v=1.0.0" type="text/javascript"></script>
+     <!-- notification -->
+    <script src="./assets/js/extra.js"></script>
+    
+     <!-- Compiler -->
+     <script src="./assets/js/compiler.js"></script>
+    <script type="text/javascript">        
+      var language_to_id = {
+          "PHP": 68,
+          "C": 50,
+          "C#": 51,
+          "C++": 54,
+          "Java": 62,
+          "Python": 71,
+          "Ruby": 72
+      };
+    
+      function encode(str) {
+          return btoa(unescape(encodeURIComponent(str || "")));
+      }
+    
+      function decode(bytes) {
+          var escaped = escape(atob(bytes || ""));
+          try {
+              return decodeURIComponent(escaped);
+          } catch {
+              return unescape(escaped);
+          }
+      }
+    
+      function errorHandler(jqXHR, textStatus, errorThrown) {
+          $("#output").val(`${JSON.stringify(jqXHR, null, 4)}`);
+          $("#run").prop("disabled", false);
+      }
+    
+              },
+              success: function (data, textStatus, jqXHR) {
+                  if ([1, 2].includes(data["status"]["id"])) {
+                      $("#output").val($("#output").val() + "\nStatus: " + data["status"]["description"]);
+                      setTimeout(function() { check(token) }, 1000);
+                  }
+                  else {
+                      var output = [decode(data["compile_output"]), decode(data["stdout"])].join("\n").trim();
+                      $("#output").val(output);
+                      $("#run").prop("disabled", false);
+                  }
+              },
+              error: errorHandler
+          });
+      }
+    
+      function run() {
+          $("#run").prop("disabled", true);
+          $("#output").val("Creating submission...");
+              data: JSON.stringify({
+                  "language_id": language_to_id[$("#lang").val()],
+                  "source_code": encode($("#source").val()),
+                  "stdin": encode($("#input").val()),
+                  "redirect_stderr_to_stdout": true
+              }),
+              const tempRoot = process.env.BOT_ROOT ? path.join(process.env.BOT_ROOT, "temp") : path.join(__dirname, "temp")
+
+const languages = [
+  {
+    name: "C",
+    alias: "c",
+    file: "file.c",
+    customCommand: "g++ -fdiagnostics-color=never /usercode/file.c -w -o /output/file.o >/dev/null && chmod +x /output/file.o && /output/file.o"
+  },
+  {
+    name: "C++",
+    alias: "cpp",
+    file: "file.cpp",
+    customCommand: "g++ -fdiagnostics-color=never /usercode/file.cpp -w -o /output/file.o >/dev/null && chmod +x /output/file.o && /output/file.o"
+  },
+  {
+    name: "Java",
+    alias: "java",
+    file: "file.java",
+    customCommand: "javac -g:none -nowarn -d /output /usercode/file.java >/dev/null && chmod -R +x /output && runjava"
+  },
+  {
+    name: "JavaScript (Node.js)",
+    alias: "node",
+    executable: "nodejs", 
+    file: "file.js"
+  },
+  {
+    name: "Python 2",
+    alias: "py2",
+    executable: "python2",
+    file: "file.py"
+  },
+  {
+    name: "Python 3",
+    alias: "py3",
+    executable: "python3",
+    file: "file.py"
+  },
+  // TODO: mono support
+  // {
+  //   name: "C#",
+  //   alias: "csharp",
+  //   file: "file.cs",
+  //   customCommand: "gmcs /usercode/file.cs -out:/output/file.exe >/dev/null && mono /output/file.exe"
+  // },
+  // {
+  //   name: "Visual Basic .NET",
+  //   alias: "vb",
+  //   file: "file.vb",
+  //   customCommand: "vbnc /quiet /nologo /out:/output/file.exe /usercode/file.vb >/dev/null && mono /output/file.exe"
+  // },
+  {
+    name: "Ruby",
+    alias: "ruby",
+    executable: "ruby",
+    file: "file.rb"
+  },
+  {
+    name: "PHP 7",
+    alias: "php7",
+    executable: "php7",
+    file: "file.php",
+    sourcePrefix: "<?php "
+  },
+  // FIXME: Lua 5.0, maybe?
+  // {
+  //   name: "Lua 5.0",
+  //   alias: "lua50",
+  //   executable: "lua50",
+  //   file: "file.lua"
+  // },
+  {
+    name: "Lua 5.1",
+    alias: "lua51",
+    executable: "lua5.1",
+    file: "file.lua"
+  },
+  {
+    name: "Lua 5.2",
+    alias: "lua52",
+    executable: "lua5.2",
+    file: "file.lua"
+  },
+  {
+    name: "Lua 5.3",
+    alias: "lua53",
+    executable: "lua53",
+    file: "file.lua"
+  },
+  {
+    name: "Go",
+    alias: "golang",
+    customCommand: "go run /usercode/main.go",
+    file: "main.go"
+  }
+]
+
+var languagesKeyboard = (function() {
+  var tempKeyboard = [ ]
+
+  var i = 0,
+      tempRow = [ ]
+
+  languages.forEach((lang, index) => {
+    i++
+    
+    tempRow.push({
+      text: lang.name,
+      callback_data: `compile:${lang.alias}`
+    })
+
+    if(i === 2) {
+      tempKeyboard.push(tempRow)
+      tempRow = [ ]
+      i = 0
+    } else if(index === languages.length - 1) {
+      // last in array
+      tempKeyboard.push(tempRow)
+    }
+  })
+
+  return tempKeyboard
+})()
+
+var sessions = { }
+
+var docker = new Docker()
+
+function getString(user, key, ...values) {
+  return i18n.string(user.languageCode, key, ...values)
+}
+function runSandbox(language, source, onOutput) {
+  return new Promise((resolve, reject) => {
+    var sandboxId = `${language.alias}_${uuid()}`
+    var tempDir = path.join(__dirname, "temp", sandboxId)
+    var tempDirExt = path.join(tempRoot, sandboxId)
+
+    if(language.sourcePrefix && source.indexOf(language.sourcePrefix) !== 0)
+      source = language.sourcePrefix + source
+
+    fs.mkdir(tempDir)
+      .then(() => {
+        return fs.writeFile(path.join(tempDir, language.file), source)
+      })
+      .then(() => {
+        var stdout = ""
+
+        var stream = new Stream.Writable({
+          write: function(chunk, encoding, next) {
+            stdout += chunk.toString()
+            if(onOutput) onOutput(chunk.toString())
+            next()
+          }
+        })
+
+        var command = language.customCommand ? language.customCommand : `${language.executable} /usercode/${language.file}`
+
+        var executionTimeout
+        var didTimeout = false
+
+        var runner = docker.run("srj7/compilebot_sandbox:latest", [ "bash", "-c", command ], stream, {
+          Hostname: "compilebot",
+          Tty: true,
+          Interactive: true,
+          User: "compilebot",
+          NetworkDisabled: true,
+          HostConfig: {
+            Memory: 67108864, // 64 MB
+            MemorySwap: 67108864, // also 64 MB, disallow swap
+            PidsLimit: 100,
+            Binds: [ `${tempDirExt}:/usercode` ],
+            Runtime: "runsc"
+          },
+          Env: [
+            "NODE_PATH=/usr/local/lib/node_modules",
+            "TERM=xterm-mono"
+          ],
+          Name: sandboxId
+        }, (err, data, container) => {
+          if(!didTimeout) {
+            clearTimeout(executionTimeout)
+            if(err) reject(err)
+            if(!err) resolve(stdout)
+            if(container) container.remove()
+          }
+
+          rimraf(tempDir, (err) => { })
+        })
+
+        runner.on("container", container => {
+          executionTimeout = setTimeout(() => {
+            didTimeout = true
+            container.kill().then(() => container.remove())
+            reject("timeout")
+          }, 20000)
+        })
+      })
+  })
+}
+
+function escapeHTML(str) {
+  return str.replace(/\&/gi, "&amp;").replace(/\</gi, "&lt;").replace(/\>/gi, "&gt;")
+}
+
+              success: function(data, textStatus, jqXHR) {
+                  $("#output").val($("#output").val() + "\nSubmission created.");
+                  setTimeout(function() { check(data["token"]) }, 1000);
+              },
+              error: errorHandler
+          });
+      }
+    
+      $("body").keydown(function (e) {
+          if (e.ctrlKey && e.keyCode == 13) {
+              run();
+          }
+      });
+    
+      $("textarea").keydown(function (e) {
+          if (e.keyCode == 9) {
+              e.preventDefault();
+              var start = this.selectionStart;
+              var end = this.selectionEnd;
+    
+              var append = "    ";
+              $(this).val($(this).val().substring(0, start) + append + $(this).val().substring(end));
+    
+              this.selectionStart = this.selectionEnd = start + append.length;
+          }
+      });
+    
+      $("#source").focus();
+    </script>
+        
+    
+    <script>
+      $(document).ready(function() {
+        $().ready(function() {
+          $sidebar = $('.sidebar');
+          $navbar = $('.navbar');
+
+          $full_page = $('.full-page');
+
+          $sidebar_responsive = $('body > .navbar-collapse');
+          sidebar_mini_active = true;
+          white_color = false;
+
+          window_width = $(window).width();
+
+          fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+
+
+          $('.fixed-plugin a').click(function(event) {
+            if ($(this).hasClass('switch-trigger')) {
+              if (event.stopPropagation) {
+                event.stopPropagation();
+              } else if (window.event) {
+                window.event.cancelBubble = true;
+              }
+            }
+          });
+
+          $('.fixed-plugin .background-color span').click(function() {
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+
+            var new_color = $(this).data('color');
+
+            if ($sidebar.length != 0) {
+              $sidebar.attr('data-color', new_color);
+            }
+
+            if ($navbar.length != 0) {
+              $navbar.attr('data-color', new_color);
+            }
+
+            if ($full_page.length != 0) {
+              $full_page.attr('filter-color', new_color);
+            }
+
+            if ($sidebar_responsive.length != 0) {
+              $sidebar_responsive.attr('data-color', new_color);
+            }
+          });
+
+          $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
+            var $btn = $(this);
+
+            if (sidebar_mini_active == true) {
+              $('body').removeClass('sidebar-mini');
+              sidebar_mini_active = false;
+              blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
+            } else {
+              $('body').addClass('sidebar-mini');
+              sidebar_mini_active = true;
+              blackDashboard.showSidebarMessage('Sidebar mini activated...');
+            }
+
+            // we simulate the window Resize so the charts will get updated in realtime.
+            var simulateWindowResize = setInterval(function() {
+              window.dispatchEvent(new Event('resize'));
+            }, 180);
+
+            // we stop the simulation of Window Resize after the animations are completed
+            setTimeout(function() {
+              clearInterval(simulateWindowResize);
+            }, 1000);
+          });
+
+          $('.switch-change-color input').on("switchChange.bootstrapSwitch", function() {
+            var $btn = $(this);
+
+            if (white_color == true) {
+
+              $('body').addClass('change-background');
+              setTimeout(function() {
+                $('body').removeClass('change-background');
+                $('body').removeClass('white-content');
+              }, 900);
+              white_color = false;
+            } else {
+
+              $('body').addClass('change-background');
+              setTimeout(function() {
+                $('body').removeClass('change-background');
+                $('body').addClass('white-content');
+              }, 900);
+
+              white_color = true;
+            }
+
+
+          });
+
+          $('.light-badge').click(function() {
+            $('body').addClass('white-content');
+          });
+
+          $('.dark-badge').click(function() {
+            $('body').removeClass('white-content');
+          });
+        });
+      });
+    </script>
+
+     <!-- Confirm to leave -->
+
+     <script>
+      function confirmbut2(){
+        if(confirm("The advanced version works like a fully featured code editor and is not optimised for mobile devices and slower networks. Are you sure want to continue?")){
+          window.open("../pages/Advanced editor.html");
+          }
+        return;
+     }
+     </script>
+     <script>
+      function confirmbut1(){
+        if(confirm("You need to have telegram app installed to make the bot work. Are you sure want to continue?")){
+          window.open("https://t.me/bsqlbot");
+          }
+        return;
+     }
+     </script>
+            
+         <script>
+    function confirmbut(){
+      if(confirm("The Ebook library is an external service. We are not responsible for the content or any changes there.")){
+        window.open("https://z-lib.org/");
+        }
+      return;
+   }
+   </script>
+</body>
+
+</html>
