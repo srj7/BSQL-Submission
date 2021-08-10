@@ -1,6 +1,5 @@
-# [CompileBot for Telegram](https://t.me/CompileBot)
 
-CompileBot lets you run snippets of code via Telegram in several different languages.
+Binary Squirrel bot lets you run snippets of code via Telegram in several different languages.
 
 It works in PM or with inline mode. It currently supports these languages:
 
@@ -23,19 +22,10 @@ Whenever code is sent to the bot for execution, an ephemeral Docker container is
 
 - Limited amount of RAM (64MB)
 - Limited amount of PIDs (100)
-- [gvisor](https://github.com/google/gvisor) container runtime
 - No virtual network card attached
 - 20 second execution time limit
 
 This allows arbitrary code to be safely run within the container without having access to host resources.
-
-# Donation
-
-If you'd like to donate to this project, you can do so via [Cash App](https://cash.app/$tjhorner) or [PayPal](https://paypal.me/tjhorner). Any donations are much appreciated.
-
-# Development
-
-Instructions on development and building coming soon.
 
 # License
 
