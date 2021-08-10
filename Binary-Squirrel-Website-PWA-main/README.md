@@ -5,19 +5,21 @@
 
 **Binary Squirrel** lets you run snippets of code on devices with slow internet connection. It's also a PWA and can be installed in various devies to improve efficiency. Take a look at the files to see how easily it can be done. It uses template from Creative Tim and modified the values to work based on the needs.
 
-C
-C++
-Java
-JavaScript (Node.js)
-Python 2
-Python 3
-Ruby
-PHP 7
-Lua 5.1
-Lua 5.2
-Lua 5.3
-Go
-The Sandbox
+- C
+- C++
+- Java
+- JavaScript (Node.js)
+- Python 2
+- Python 3
+- Ruby
+- PHP 7
+- Lua 5.1
+- Lua 5.2
+- Lua 5.3
+- Go
+
+# The Sandbox
+
 Whenever code is sent to the bot for execution, an ephemeral Docker container is spawned. This container is running the image found in the docker-image folder. It runs Alpine 3.9 with all the necessary compilers and interpreters to run the code sent to the bot. In addition, the container has extra restrictions:
 
 Limited amount of RAM (64MB)
